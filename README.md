@@ -24,3 +24,5 @@ It can be filtered easily by searching for '###'. The string is not part of the 
 OR
 
 * Download `AndroidLog.xml` and move it to Android Studio's `templates` directory (on Windows: C:\Users\John\\.AndroidStudio3.1\config\templates)
+
+**Note:** Any changes you've made to the 'AndroidLog' category will get lost as the 'AndroidLog.xml' file is overwritten. You can prevent this by merging the XML files manually.
