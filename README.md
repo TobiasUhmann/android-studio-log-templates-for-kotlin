@@ -124,7 +124,7 @@ The string is part of the message instead of the TAG because the latter is omitt
 
 ## Usage
 
-* Download [extended_templates/settings.jar] and import it in Android Studio via 'File > Import Settings...'
+* Download [extended_templates/settings.jar](/extended_templates/settings.jar) and import it in Android Studio via 'File > Import Settings...'
 
 OR
 
