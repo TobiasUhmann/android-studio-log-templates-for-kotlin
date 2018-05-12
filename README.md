@@ -16,6 +16,8 @@ OR
 
 * Download [templates/AndroidLogKotlin.xml](/templates/AndroidLogKotlin.xml) and move it into Android Studio's `templates` directory (on Windows: C:\Users\John\\.AndroidStudio3.1\config\templates)
 
+The templates will be available after restarting Android Studio.
+
 # Overview
 
 The following subsections show the main differences of Kotlin (below) compared to Java (above):
@@ -131,6 +133,8 @@ OR
 * Download [extended_templates/AndroidLog.xml](/extended_templates/AndroidLog.xml) and [extended_templates/AndroidLogKotlin](/extended_templates/AndroidLogKotlin.xml) and move them into Android Studio's `templates` directory (on Windows: C:\Users\John\\.AndroidStudio3.1\config\templates)
 
 **Note:** Any changes you've made to the Java log templates will get lost as the 'AndroidLog.xml' file is overwritten. You can prevent this by merging the XML files manually.
+
+The templates will be available after restarting Android Studio.
 
 # Modify Templates
 
