@@ -1,0 +1,59 @@
+<templateSet group="AndroidLogKotlin">
+  <template name="logd" value="android.util.Log.d(TAG, &quot;$KOTLIN_FUNCTION_NAME$: $content$&quot;)" description="Log.d(TAG, String)" toReformat="true" toShortenFQNames="true">
+    <variable name="KOTLIN_FUNCTION_NAME" expression="kotlinFunctionName()" defaultValue="" alwaysStopAt="false" />
+    <variable name="content" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="KOTLIN_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="loge" value="android.util.Log.e(TAG, &quot;$KOTLIN_FUNCTION_NAME$: $content$&quot;, $exception$)" description="Log.e(TAG, String, Exception)" toReformat="true" toShortenFQNames="true">
+    <variable name="KOTLIN_FUNCTION_NAME" expression="kotlinFunctionName()" defaultValue="" alwaysStopAt="false" />
+    <variable name="content" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="exception" expression="" defaultValue="e" alwaysStopAt="false" />
+    <context>
+      <option name="KOTLIN_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="logi" value="android.util.Log.i(TAG, &quot;$KOTLIN_FUNCTION_NAME$: $content$&quot;)" description="Log.i(TAG, String)" toReformat="true" toShortenFQNames="true">
+    <variable name="KOTLIN_FUNCTION_NAME" expression="kotlinFunctionName()" defaultValue="" alwaysStopAt="false" />
+    <variable name="content" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="KOTLIN_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="logm" value="android.util.Log.d(TAG, $content$)" description="Log method name and its arguments" toReformat="true" toShortenFQNames="true">
+    <variable name="content" expression="groovyScript(&quot;def params = _2.collect {it + ' = [$' + it + ']'}.join(', '); return '\&quot;' + _1 + '() called' + (params.empty  ? '' : ' with: ' + params) + '\&quot;'&quot;, kotlinFunctionName(), functionParameters())" defaultValue="" alwaysStopAt="false" />
+    <context>
+      <option name="KOTLIN_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="logr" value="android.util.Log.d(TAG, &quot;$KOTLIN_FUNCTION_NAME$() returned: $$$result$&quot;)" description="Log result of this method" toReformat="true" toShortenFQNames="true">
+    <variable name="KOTLIN_FUNCTION_NAME" expression="kotlinFunctionName()" defaultValue="" alwaysStopAt="false" />
+    <variable name="result" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="KOTLIN_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="logt" value="companion object {&#10;    private const val TAG = &quot;$kotlinClassName$&quot;&#10;}" description="A companion object containing a logtag with your current classname" toReformat="true" toShortenFQNames="true">
+    <variable name="kotlinClassName" expression="groovyScript(&quot;_1.take(Math.min(23, _1.length()));&quot;, kotlinClassName())" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="KOTLIN_CLASS" value="true" />
+    </context>
+  </template>
+  <template name="logw" value="android.util.Log.w(TAG, &quot;$KOTLIN_FUNCTION_NAME$: $content$&quot;, $exception$)" description="Log.w(TAG, String, Exception)" toReformat="true" toShortenFQNames="true">
+    <variable name="KOTLIN_FUNCTION_NAME" expression="kotlinFunctionName()" defaultValue="" alwaysStopAt="false" />
+    <variable name="content" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="exception" expression="" defaultValue="e" alwaysStopAt="false" />
+    <context>
+      <option name="KOTLIN_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="wtf" value="android.util.Log.wtf(TAG, &quot;$KOTLIN_FUNCTION_NAME$: $content$&quot;, $exception$)" description="Log.wtf(TAG, String, Exception)" toReformat="true" toShortenFQNames="true">
+    <variable name="KOTLIN_FUNCTION_NAME" expression="kotlinFunctionName()" defaultValue="" alwaysStopAt="false" />
+    <variable name="content" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="exception" expression="" defaultValue="e" alwaysStopAt="false" />
+    <context>
+      <option name="KOTLIN_STATEMENT" value="true" />
+    </context>
+  </template>
+</templateSet>
